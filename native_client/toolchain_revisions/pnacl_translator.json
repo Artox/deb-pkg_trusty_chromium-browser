@@ -1,0 +1,59 @@
+{
+  "package_name": "pnacl_translator",
+  "package_targets": {
+    "linux_arm": {
+      "archives": [
+        {
+          "extract_dir": "",
+          "hash": "6015ae7a132e3e643565a198a49f872215f8169e",
+          "log_url": null,
+          "name": "pnacl-translator.tgz",
+          "tar_src_dir": "",
+          "url": "https://storage.googleapis.com/nativeclient-archive2/toolchain/13769/naclsdk_pnacl_translator.tgz"
+        }
+      ],
+      "version": 1
+    },
+    "linux_x86": {
+      "archives": [
+        {
+          "extract_dir": "",
+          "hash": "6015ae7a132e3e643565a198a49f872215f8169e",
+          "log_url": null,
+          "name": "pnacl-translator.tgz",
+          "tar_src_dir": "",
+          "url": "https://storage.googleapis.com/nativeclient-archive2/toolchain/13769/naclsdk_pnacl_translator.tgz"
+        }
+      ],
+      "version": 1
+    },
+    "mac_x86": {
+      "archives": [
+        {
+          "extract_dir": "",
+          "hash": "6015ae7a132e3e643565a198a49f872215f8169e",
+          "log_url": null,
+          "name": "pnacl-translator.tgz",
+          "tar_src_dir": "",
+          "url": "https://storage.googleapis.com/nativeclient-archive2/toolchain/13769/naclsdk_pnacl_translator.tgz"
+        }
+      ],
+      "version": 1
+    },
+    "win_x86": {
+      "archives": [
+        {
+          "extract_dir": "",
+          "hash": "6015ae7a132e3e643565a198a49f872215f8169e",
+          "log_url": null,
+          "name": "pnacl-translator.tgz",
+          "tar_src_dir": "",
+          "url": "https://storage.googleapis.com/nativeclient-archive2/toolchain/13769/naclsdk_pnacl_translator.tgz"
+        }
+      ],
+      "version": 1
+    }
+  },
+  "revision": 13769,
+  "revision_hash": "423aa962de22daf127adab9b77f7960460a55d3f"
+}
