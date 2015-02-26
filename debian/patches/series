@@ -30,3 +30,4 @@ lp-translations-paths
 #gyp-icu-m32-test
 #mir-support
 macro-templates-not-match
+ld-memory-32bit.patch
