@@ -31,3 +31,6 @@ lp-translations-paths
 #mir-support
 macro-templates-not-match
 ld-memory-32bit.patch
+0002-Add-VPU-video-decode-accelerator-to-Chromium-GPU-.patch
+0001-Enable-share-group-workaround-for-Vivante-GPUs.patch
+imxvpu.patch
