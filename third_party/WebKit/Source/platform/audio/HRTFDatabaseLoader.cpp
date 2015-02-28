@@ -71,42 +71,46 @@ HRTFDatabaseLoader::HRTFDatabaseLoader(float sampleRate)
 HRTFDatabaseLoader::~HRTFDatabaseLoader()
 {
     ASSERT(isMainThread());
-
     waitForLoaderThreadCompletion();
-    m_hrtfDatabase.clear();
 }
 
 void HRTFDatabaseLoader::load()
 {
     ASSERT(!isMainThread());
-    if (!m_hrtfDatabase) {
-        // Load the default HRTF database.
-        m_hrtfDatabase = HRTFDatabase::create(m_databaseSampleRate);
+    m_thread->attachGC();
+
+    {
+        MutexLocker locker(m_lock);
+        if (!m_hrtfDatabase) {
+            // Load the default HRTF database.
+            m_hrtfDatabase = HRTFDatabase::create(m_databaseSampleRate);
+        }
     }
+
+    m_thread->detachGC();
 }
 
 void HRTFDatabaseLoader::loadAsynchronously()
 {
     ASSERT(isMainThread());
 
-    MutexLocker locker(m_threadLock);
-
-    if (!m_hrtfDatabase && !m_databaseLoaderThread) {
+    MutexLocker locker(m_lock);
+    if (!m_hrtfDatabase && !m_thread) {
         // Start the asynchronous database loading process.
-        m_databaseLoaderThread = adoptPtr(Platform::current()->createThread("HRTF database loader"));
-        m_databaseLoaderThread->postTask(new Task(WTF::bind(&HRTFDatabaseLoader::load, this)));
+        m_thread = WebThreadSupportingGC::create("HRTF database loader");
+        m_thread->postTask(new Task(WTF::bind(&HRTFDatabaseLoader::load, this)));
     }
 }
 
-bool HRTFDatabaseLoader::isLoaded() const
+bool HRTFDatabaseLoader::isLoaded()
 {
+    MutexLocker locker(m_lock);
     return m_hrtfDatabase;
 }
 
 void HRTFDatabaseLoader::waitForLoaderThreadCompletion()
 {
-    MutexLocker locker(m_threadLock);
-    m_databaseLoaderThread.clear();
+    m_thread.clear();
 }
 
 } // namespace blink
