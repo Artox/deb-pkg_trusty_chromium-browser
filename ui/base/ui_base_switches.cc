@@ -9,7 +9,7 @@ namespace switches {
 #if defined(OS_MACOSX) && !defined(OS_IOS)
 // Enable use of cross-process CALayers to display content directly from the
 // GPU process on Mac.
-const char kEnableRemoteCoreAnimation[] = "enable-remote-core-animation";
+const char kDisableRemoteCoreAnimation[] = "disable-remote-core-animation";
 #endif
 
 // Disables use of DWM composition for top level windows.
@@ -27,6 +27,10 @@ const char kDisableTouchDragDrop[] = "disable-touch-drag-drop";
 // Disables controls that support touch base text editing.
 const char kDisableTouchEditing[] = "disable-touch-editing";
 
+// Enables a zoomed popup bubble that allows the user to select a link.
+const char kEnableLinkDisambiguationPopup[] =
+    "enable-link-disambiguation-popup";
+
 // Enables an experimental focus manager to track text input clients.
 const char kEnableTextInputFocusManager[] = "enable-text-input-focus-manager";
 
@@ -35,6 +39,9 @@ const char kEnableTouchDragDrop[] = "enable-touch-drag-drop";
 
 // Enables controls that support touch base text editing.
 const char kEnableTouchEditing[] = "enable-touch-editing";
+
+// Enables additional visual feedback to touch input.
+const char kEnableTouchFeedback[] = "enable-touch-feedback";
 
 // The language file that we want to try to open. Of the form
 // language[-country] where language is the 2 letter code from ISO-639.

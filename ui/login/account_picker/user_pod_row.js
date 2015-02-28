@@ -191,6 +191,10 @@ cr.define('login', function() {
    */
   UserPodCustomIcon.ICONS = [
     {id: 'locked', class: 'custom-icon-locked'},
+    {id: 'locked-to-be-activated',
+     class: 'custom-icon-locked-to-be-activated'},
+    {id: 'locked-with-proximity-hint',
+     class: 'custom-icon-locked-with-proximity-hint'},
     {id: 'unlocked', class: 'custom-icon-unlocked'},
     {id: 'hardlocked', class: 'custom-icon-hardlocked'},
     {id: 'spinner', class: 'custom-icon-spinner'}
@@ -340,7 +344,7 @@ cr.define('login', function() {
      *    parameters.
      */
     setTooltip: function(tooltip) {
-      this.iconElement.classList.toggle('icon-with-tooltip', !!tooltip.text);
+      this.iconElement.classList.toggle('icon-with-tooltip', !!tooltip);
 
       if (this.tooltip_ == tooltip.text && !tooltip.autoshow)
         return;
@@ -1780,6 +1784,9 @@ cr.define('login', function() {
       this.actionBoxRemoveUserWarningTextElement.hidden = isSupervisedUser;
       this.actionBoxRemoveSupervisedUserWarningTextElement.hidden =
           !isSupervisedUser;
+
+      this.passwordElement.setAttribute('aria-label', loadTimeData.getStringF(
+        'passwordFieldAccessibleName', this.user_.emailAddress));
 
       UserPod.prototype.updateActionBoxArea.call(this);
     },

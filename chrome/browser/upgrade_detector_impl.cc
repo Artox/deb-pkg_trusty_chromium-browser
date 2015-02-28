@@ -134,12 +134,10 @@ void DetectUpdatability(const base::Closure& callback_task,
                         bool* is_auto_update_enabled) {
   DCHECK(BrowserThread::CurrentlyOn(BrowserThread::FILE));
 
-  base::string16 app_guid = installer::GetAppGuidForUpdates(IsSystemInstall());
-  DCHECK(!app_guid.empty());
   // Don't try to turn on autoupdate when we failed previously.
   if (is_auto_update_enabled) {
     *is_auto_update_enabled =
-        GoogleUpdateSettings::AreAutoupdatesEnabled(app_guid);
+        GoogleUpdateSettings::AreAutoupdatesEnabled();
   }
   *is_unstable_channel = IsUnstableChannel();
   BrowserThread::PostTask(BrowserThread::UI, FROM_HERE, callback_task);
@@ -315,10 +313,6 @@ void UpgradeDetectorImpl::DetectUpgradeTask(
 
   // Get the version of the currently *running* instance of Chrome.
   chrome::VersionInfo version_info;
-  if (!version_info.is_valid()) {
-    NOTREACHED() << "Failed to get current file version";
-    return;
-  }
   Version running_version(version_info.Version());
   if (!running_version.IsValid()) {
     NOTREACHED();
