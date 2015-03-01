@@ -4,7 +4,7 @@ debian-bug: http://bugs.debian.org/750361
 
 --- a/build/common.gypi
 +++ b/build/common.gypi
-@@ -3739,8 +3739,6 @@
+@@ -3779,8 +3779,6 @@
                  # http://crbug.com/313032 for an example where this has "bit"
                  # us in the past.
                  'cflags': [
@@ -24,8 +24,8 @@ debian-bug: http://bugs.debian.org/750361
  #include <xmmintrin.h>
  #define CONVOLVE_FUNC Convolve_SSE
  #elif defined(ARCH_CPU_ARM_FAMILY) && defined(USE_NEON)
-@@ -327,7 +327,7 @@ float SincResampler::Convolve_C(const fl
-       + kernel_interpolation_factor * sum2;
+@@ -324,7 +324,7 @@ float SincResampler::Convolve_C(const fl
+       kernel_interpolation_factor * sum2);
  }
  
 -#if defined(ARCH_CPU_X86_FAMILY)
@@ -75,9 +75,9 @@ debian-bug: http://bugs.debian.org/750361
 -#if defined(ARCH_CPU_X86_FAMILY) && !defined(OS_NACL)
 +#if defined(__x86_64__) && !defined(OS_NACL)
  #include <xmmintrin.h>
- #define FMAC_FUNC FMAC_SSE
- #define FMUL_FUNC FMUL_SSE
-@@ -82,7 +82,7 @@ std::pair<float, float> EWMAAndMaxPower_
+ // Don't use custom SSE versions where the auto-vectorized C version performs
+ // better, which is anywhere clang is used.
+@@ -89,7 +89,7 @@ std::pair<float, float> EWMAAndMaxPower_
    return result;
  }
  

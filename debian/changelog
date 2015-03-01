@@ -1,4 +1,56 @@
-chromium-browser (39.0.2171.65-0ubuntu0.14.04.1.1064) trusty-security; urgency=medium
+chromium-browser (40.0.2214.111-0ubuntu0.14.04.1.1069) trusty-security; urgency=medium
+
+  * Upstream release 40.0.2214.111:
+    - CVE-2015-1209: Use-after-free in DOM.
+    - CVE-2015-1210: Cross-origin-bypass in V8 bindings.
+    - CVE-2015-1211: Privilege escalation using service workers.
+    - CVE-2015-1212: Various fixes from internal audits, fuzzing and other
+      initiatives.
+
+ -- Chad MILLER <chad.miller@canonical.com>  Fri, 06 Feb 2015 09:38:15 -0500
+
+chromium-browser (40.0.2214.94-0ubuntu0.14.04.1.1068) trusty-security; urgency=medium
+
+  * Upstream release 40.0.2214.94.
+  * Upstream release 40.0.2214.93.
+  * Upstream release 40.0.2214.91. (LP: #1414753)
+    - CVE-2014-7923: Memory corruption in ICU.
+    - CVE-2014-7924: Use-after-free in IndexedDB.
+    - CVE-2014-7925: Use-after-free in WebAudio.
+    - CVE-2014-7926: Memory corruption in ICU.
+    - CVE-2014-7927: Memory corruption in V8.
+    - CVE-2014-7928: Memory corruption in V8.
+    - CVE-2014-7930: Use-after-free in DOM.
+    - CVE-2014-7931: Memory corruption in V8.
+    - CVE-2014-7929: Use-after-free in DOM.
+    - CVE-2014-7932: Use-after-free in DOM.
+    - CVE-2014-7933: Use-after-free in FFmpeg.
+    - CVE-2014-7934: Use-after-free in DOM.
+    - CVE-2014-7935: Use-after-free in Speech.
+    - CVE-2014-7936: Use-after-free in Views.
+    - CVE-2014-7937: Use-after-free in FFmpeg.
+    - CVE-2014-7938: Memory corruption in Fonts.
+    - CVE-2014-7939: Same-origin-bypass in V8.
+    - CVE-2014-7940: Uninitialized-value in ICU.
+    - CVE-2014-7941: Out-of-bounds read in UI.
+    - CVE-2014-7942: Uninitialized-value in Fonts.
+    - CVE-2014-7943: Out-of-bounds read in Skia.
+    - CVE-2014-7944: Out-of-bounds read in PDFium.
+    - CVE-2014-7945: Out-of-bounds read in PDFium.
+    - CVE-2014-7946: Out-of-bounds read in Fonts.
+    - CVE-2014-7947: Out-of-bounds read in PDFium.
+    - CVE-2014-7948: Caching error in AppCache.
+  * debian/patch/search-credit: Don't force client in GOOG suggestions search.
+    (LP: #1398900)
+  * debian/patches/dri3-within-sandbox: Backport V41 sandbox, fixing DRI3.
+    (LP: #1378627)
+  * debian/patches/macro-templates-not-match: Remove. No longer necessary.
+  * debian/patches/arm-neon.patch: Kill armv7=neon assumption. Fix typos.
+  * debian/rules: chrpath for all packages.  (LP: #1415555)
+  
+ -- Chad MILLER <chad.miller@canonical.com>  Fri, 30 Jan 2015 15:48:09 -0500
+
+chromium-browser (39.0.2171.65-0ubuntu1.1103) vivid; urgency=medium
 
   * Upstream release 39.0.2171.65:
     - CVE-2014-7899: Address bar spoofing.
@@ -30,6 +82,45 @@ chromium-browser (39.0.2171.65-0ubuntu0.14.04.1.1064) trusty-security; urgency=m
     for dead NPAPI unity-webapps extension.
 
  -- Chad MILLER <chad.miller@canonical.com>  Sat, 22 Nov 2014 14:06:34 -0500
+
+chromium-browser (38.0.2125.111-0ubuntu1.1103) vivid; urgency=medium
+
+  * Upstream release 38.0.2125.111.
+  * Upstream release 38.0.2125.104.
+  * Upstream release 38.0.2125.101:  (LP: #1310163)
+    - CVE-2014-3188: A special thanks to Jüri Aedla for a combination of V8 and
+      IPC bugs that can lead to remote code execution outside of the sandbox.
+    - CVE-2014-3189: Out-of-bounds read in PDFium.
+    - CVE-2014-3190: Use-after-free in Events.
+    - CVE-2014-3191: Use-after-free in Rendering.
+    - CVE-2014-3192: Use-after-free in DOM.
+    - CVE-2014-3193: Type confusion in Session Management.
+    - CVE-2014-3194: Use-after-free in Web Workers.
+    - CVE-2014-3195: Information Leak in V8.
+    - CVE-2014-3196: Permissions bypass in Windows Sandbox.
+    - CVE-2014-3197: Information Leak in XSS Auditor.
+    - CVE-2014-3198: Out-of-bounds read in PDFium.
+    - CVE-2014-3199: Release Assert in V8 bindings.
+    - CVE-2014-3200: Various fixes from internal audits, fuzzing and other
+      initiatives (Chrome 38).
+  * debian/rules: Prefer GCC 4.8 when compiling. 4.9 remains buggy.
+  * Make the verification step in clean make more compare-able output.
+  * debian/patches/configuration-directory.patch: Account for new location of
+    policies directory in /etc . Change back. (LP: #1373802)
+  * debian/patches/lp-translations-paths: Map old third_party filenames to
+    new name after processor compiles.
+  * debian/rules: Fix patch-translations rule, workflow.
+  * debian/patches/macro-templates-not-match: Anonymous struct isn't sizable.
+  * debian/chromium-browser.sh.in: Fix broken logic of CHROMIUM_USER_FLAGS,
+    which has never worked. (LP: #1381644)
+  * debian/patches/disable-sse: Disable more SSE #includes.
+  * debian/rules: Omit unnecessary files from packaging.
+  * debian/chromium-browser.sh.in: Fix variable name bug and suggest
+    ~/.chromium-browser.init file over hamfisted CHROMIUM_USER_FLAGS.
+  * debian/patches/5-desktop-integration-settings.patch: Adapt to new settings
+    APIs.
+
+ -- Chad MILLER <chad.miller@canonical.com>  Wed, 15 Oct 2014 14:22:55 -0400
 
 chromium-browser (38.0.2125.111-0ubuntu0.14.04.1.1061) trusty-security; urgency=medium
 
@@ -139,8 +230,24 @@ chromium-browser (36.0.1985.143-0ubuntu1) trusty-security; urgency=low
     debian/chromium-codecs-ffmpeg-extra.lintian-overrides,
     debian/chromium-codecs-ffmpeg.lintian-overrides,
     debian/source/lintian-overrides: Add lintian overrides.
+    debian/chromium-codecs-ffmpeg-extra.lintian-overrides,
+    debian/chromium-codecs-ffmpeg.lintian-overrides,
+    debian/source/lintian-overrides: Add lintian overrides.
 
  -- Chad MILLER <chad.miller@canonical.com>  Tue, 19 Aug 2014 14:57:03 -0400
+
+chromium-browser (36.0.1985.125-0ubuntu2) utopic; urgency=low
+
+  * Upstream release 36.0.1985.125:
+    - CVE-2014-3160: Same-Origin-Policy bypass in SVG.
+    - CVE-2014-3162: Various fixes from internal audits, fuzzing and other
+      initiatives.
+  * debian/patches/*: Moved more gtk related changes to aura code.
+  * debian/control: Build-dep version of ninja-build should be recent.
+  * debian/patches/gyp-icu-m32-test: Smarter g++ test, no "echo |bad".
+  * Skip version -0ubuntu1 because Trusty postdates it.
+
+ -- Chad MILLER <chad.miller@canonical.com>  Thu, 07 Aug 2014 17:22:20 -0400
 
 chromium-browser (36.0.1985.125-0ubuntu1) trusty-security; urgency=low
 

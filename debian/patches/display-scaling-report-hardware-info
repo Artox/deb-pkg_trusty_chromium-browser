@@ -4,7 +4,7 @@ Forwarded: not-needed
 
 --- a/ui/views/widget/desktop_aura/desktop_screen_x11.cc
 +++ b/ui/views/widget/desktop_aura/desktop_screen_x11.cc
-@@ -349,12 +349,15 @@ std::vector<gfx::Display> DesktopScreenX
+@@ -348,12 +348,15 @@ std::vector<gfx::Display> DesktopScreenX
        if (density_indicator != 0) {
          // n/8 is actual scaling factor.  Zero means discover from hardware.
          device_scale_factor = float(density_indicator / 8.0);

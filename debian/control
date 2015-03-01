@@ -19,11 +19,12 @@ Build-Depends:
 	libcups2-dev | libcupsys2-dev,
 	libasound2-dev,
 	libnss3-dev,
-	libgles2-dev [armel armhf],
+	libgles2-mesa-dev [armel armhf],
 	libpci-dev,
 	libxtst-dev,
 	libxss-dev,
 	libgtk2.0-dev,
+	libglib2.0-dev,
 	libgnome-keyring-dev,
 	libudev-dev,
 	libgconf2-dev,
@@ -36,9 +37,7 @@ Build-Depends:
 	chrpath,
 	gcc-4.8,
 	g++-4.8,
-	xdg-utils,
-	libfslvpuwrap-dev,
-	gpu-viv-bin-x11-dev,
+	xdg-utils
 Standards-Version: 3.9.6
 
 Package: chromium-browser
