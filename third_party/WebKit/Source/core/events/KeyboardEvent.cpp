@@ -85,16 +85,6 @@ static inline KeyboardEvent::KeyLocationCode keyLocationCode(const PlatformKeybo
     }
 }
 
-KeyboardEventInit::KeyboardEventInit()
-    : location(0)
-    , ctrlKey(false)
-    , altKey(false)
-    , shiftKey(false)
-    , metaKey(false)
-    , repeat(false)
-{
-}
-
 KeyboardEvent::KeyboardEvent()
     : m_location(DOM_KEY_LOCATION_STANDARD)
     , m_isAutoRepeat(false)
@@ -109,13 +99,14 @@ KeyboardEvent::KeyboardEvent(const PlatformKeyboardEvent& key, AbstractView* vie
     , m_location(keyLocationCode(key))
     , m_isAutoRepeat(key.isAutoRepeat())
 {
+    setUICreateTime(key.timestamp());
 }
 
 KeyboardEvent::KeyboardEvent(const AtomicString& eventType, const KeyboardEventInit& initializer)
-    : UIEventWithKeyState(eventType, initializer.bubbles, initializer.cancelable, initializer.view, initializer.detail, initializer.ctrlKey, initializer.altKey, initializer.shiftKey, initializer.metaKey)
-    , m_keyIdentifier(initializer.keyIdentifier)
-    , m_location(initializer.location)
-    , m_isAutoRepeat(initializer.repeat)
+    : UIEventWithKeyState(eventType, initializer.bubbles(), initializer.cancelable(), initializer.view(), initializer.detail(), initializer.ctrlKey(), initializer.altKey(), initializer.shiftKey(), initializer.metaKey())
+    , m_keyIdentifier(initializer.keyIdentifier())
+    , m_location(initializer.location())
+    , m_isAutoRepeat(initializer.repeat())
 {
 }
 
@@ -172,14 +163,6 @@ int KeyboardEvent::keyCode() const
     // We match IE.
     if (!m_keyEvent)
         return 0;
-
-#if OS(ANDROID)
-    // FIXME: Check to see if this applies to other OS.
-    // If the key event belongs to IME composition then propagate to JS.
-    if (m_keyEvent->nativeVirtualKeyCode() == 0xE5) // VKEY_PROCESSKEY
-        return m_keyEvent->nativeVirtualKeyCode();
-#endif
-
     if (type() == EventTypeNames::keydown || type() == EventTypeNames::keyup)
         return windowsVirtualKeyCodeWithoutLocation(m_keyEvent->windowsVirtualKeyCode());
 
@@ -230,10 +213,10 @@ KeyboardEventDispatchMediator::KeyboardEventDispatchMediator(PassRefPtrWillBeRaw
 {
 }
 
-bool KeyboardEventDispatchMediator::dispatchEvent(EventDispatcher* dispatcher) const
+bool KeyboardEventDispatchMediator::dispatchEvent(EventDispatcher& dispatcher) const
 {
     // Make sure not to return true if we already took default action while handling the event.
-    return EventDispatchMediator::dispatchEvent(dispatcher) && !event()->defaultHandled();
+    return EventDispatchMediator::dispatchEvent(dispatcher) && !event().defaultHandled();
 }
 
 } // namespace blink
