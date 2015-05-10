@@ -19,7 +19,7 @@ Build-Depends:
 	libcups2-dev | libcupsys2-dev,
 	libasound2-dev,
 	libnss3-dev,
-	libgles2-mesa-dev [armel armhf],
+	libgles2-dev [armel armhf],
 	libpci-dev,
 	libxtst-dev,
 	libxss-dev,
@@ -37,7 +37,10 @@ Build-Depends:
 	chrpath,
 	gcc-4.8,
 	g++-4.8,
-	xdg-utils
+	xdg-utils,
+	libfslvpuwrap-dev,
+	gpu-viv-bin-x11,
+	gpu-viv-bin-x11-dev,
 Standards-Version: 3.9.6
 
 Package: chromium-browser
@@ -47,7 +50,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
 	bash (>= 4),
 	libnss3,
 	xdg-utils,
-	chromium-codecs-ffmpeg-extra (>= 0.6) | chromium-codecs-ffmpeg (>= 0.6)
+	chromium-codecs-ffmpeg-extra (>= 0.6) | chromium-codecs-ffmpeg (>= 0.6),
+	gpu-viv-bin-x11,
+	gpu-viv-bin-x11-dev
 Recommends: chromium-browser-l10n
 Suggests: webaccounts-chromium-extension,
 	unity-chromium-extension,
