@@ -42,10 +42,10 @@ class MediaStreamTrack;
 class SpeechRecognitionController;
 class SpeechRecognitionError;
 
-class SpeechRecognition final : public RefCountedGarbageCollectedWillBeGarbageCollectedFinalized<SpeechRecognition>, public ActiveDOMObject, public EventTargetWithInlineData {
+class SpeechRecognition final : public RefCountedGarbageCollectedEventTargetWithInlineData<SpeechRecognition>, public ActiveDOMObject {
     DEFINE_EVENT_TARGET_REFCOUNTING_WILL_BE_REMOVED(RefCountedGarbageCollected<SpeechRecognition>);
-    DEFINE_WRAPPERTYPEINFO();
     WILL_BE_USING_GARBAGE_COLLECTED_MIXIN(SpeechRecognition);
+    DEFINE_WRAPPERTYPEINFO();
 public:
     static SpeechRecognition* create(ExecutionContext*);
     virtual ~SpeechRecognition();
@@ -60,8 +60,8 @@ public:
     void setContinuous(bool continuous) { m_continuous = continuous; }
     bool interimResults() { return m_interimResults; }
     void setInterimResults(bool interimResults) { m_interimResults = interimResults; }
-    unsigned long maxAlternatives() { return m_maxAlternatives; }
-    void setMaxAlternatives(unsigned long maxAlternatives) { m_maxAlternatives = maxAlternatives; }
+    unsigned maxAlternatives() { return m_maxAlternatives; }
+    void setMaxAlternatives(unsigned maxAlternatives) { m_maxAlternatives = maxAlternatives; }
     MediaStreamTrack* audioTrack() { return m_audioTrack; }
     void setAudioTrack(MediaStreamTrack* audioTrack) { m_audioTrack = audioTrack; }
 

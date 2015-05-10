@@ -2,14 +2,11 @@
 <translation id="6676384891291319759">Akses Internet</translation>
 <translation id="8586442755830160949">Hak Cipta <ph name="YEAR"/> Pengarang Chromium. Hak cipta terpelihara.</translation>
 <translation id="6373523479360886564">Adakah anda pasti mahu menyahpasang Chromium?</translation>
-<translation id="5065199687811594072">Adakah anda mahu Chromium menyimpan maklumat kad kredit ini untuk melengkapkan borang web?</translation>
 <translation id="6510925080656968729">Nyahpasang Chromium</translation>
 <translation id="2615699638672665509">Komputer ini akan berhenti menerima kemas kini Chromium kerana perkakasan komputer ini tidak lagi disokong.</translation>
 <translation id="5532301346661895910">Chromium akan menyimpan maklumat ini di |kata laluan disimpan Google| dan mengingatinya apabila anda memerlukannya nanti.</translation>
 <translation id="6893813176749746474">Chromium telah dikemas kini, tetapi anda belum menggunakannya untuk sekurang-kurangnya 30 hari.</translation>
-<translation id="1550579416447684632">Lancarkan apl Chromium</translation>
 <translation id="2732467638532545152">Komputer anda menjalankan versi lama Microsoft Windows yang tidak dapat memproses sijil keselamatan tapak web ini. Disebabkan masalah ini, Chromium tidak dapat memberitahu sama ada sijil berasal dari <ph name="SITE"/> atau daripada seseorang pada rangkaian anda yang berpura-pura menjadi <ph name="SITE"/>. Sila kemas kini komputer anda kepada versi Windows yang lebih baharu.</translation>
-<translation id="4267347018362241535">Pelancar Apl Chromium ialah platform tersendiri untuk apl Chromium.</translation>
 <translation id="2770231113462710648">Tukar penyemak imbas lalai kepada:</translation>
 <translation id="6613594504749178791">Perubahan anda akan dilaksanakan apabila anda melancarkan semula Chromium pada masa hadapan.</translation>
 <translation id="9089354809943900324">Chromium sudah usang</translation>
@@ -39,10 +36,10 @@
 <translation id="3883381313049582448">Gunakan kata laluan yang dijana oleh Chromium</translation>
 <translation id="3549345495227188780">Bermula dengan OS Chromium</translation>
 <translation id="1668054258064581266">Selepas mengalih keluar akaun anda daripada Chromium, anda mungkin perlu memuatkan semula tab yang dibuka untuk memberi kesan.</translation>
-<translation id="6953661834318318668">Bar Alat Chromium</translation>
 <translation id="4285930937574705105">Pemasangan gagal disebabkan ralat yang tidak dinyatakan. Jika Chromium sedang dijalankan, sila tutup dan cuba semula.</translation>
 <translation id="1396446129537741364">Chromium sedang cuba memaparkan kata laluan.</translation>
 <translation id="8987477933582888019">Penyemak imbas web</translation>
+<translation id="4050175100176540509">Peningkatan keselamatan penting dan ciri baharu tersedia dalam versi terkini.</translation>
 <translation id="2886012850691518054">Pilihan: Bantu jadikan Chromium lebih baik dengan menghantar statistik penggunaan dan laporan ranap kepada Google secara automatik.</translation>
 <translation id="580822234363523061">Pergi ke
           menu Chromium &gt;
@@ -63,7 +60,6 @@
 <translation id="8134284582177628525">Jika anda berkongsi komputer ini dengan <ph name="PROFILE_NAME"/> , tambahkan diri anda pada Chromium menyemak imbas secara berasingan. Jika tidak, putuskan sambungan Akaun Googlenya.</translation>
 <translation id="1480489203462860648">Cubalah, ia sudah dipasang</translation>
 <translation id="3032787606318309379">Menambah ke Chromium...</translation>
-<translation id="4831257561365056138">Nyahpasang Pelancar Apl Chromium</translation>
 <translation id="4222580632002216401">Anda kini sedang log masuk ke Chromium! Penyegerakan dilumpuhkan oleh pentadbir anda.</translation>
 <translation id="4207043877577553402"><ph name="BEGIN_BOLD"/>Amaran:<ph name="END_BOLD"/> Chromium tidak dapat menghalang sambungan daripada merakamkan sejarah penyemakan imbas anda. Untuk melumpuhkan sambungan ini dalam mod inkognito, nyahpilih pilihan ini.</translation>
 <translation id="985602178874221306">Pengarang Chromium</translation>
@@ -75,12 +71,7 @@
 <translation id="8897323336392112261">Sambungan turut mengawal halaman yang ditunjukkan apabila anda memulakan Chromium atau mengklik butang Laman Utama.</translation>
 <translation id="4330585738697551178">Modul ini diketahui bercanggah dengan Chromium.</translation>
 <translation id="3190315855212034486">Alamak! Chromium mengalami ranap sistem. Lancarkan semula sekarang?</translation>
-<translation id="8843170958047978824">Alih Keluar Daripada Chromium</translation>
 <translation id="3068515742935458733">Bantu jadikan Chromium lebih baik dengan menghantar laporan ranap dan <ph name="UMA_LINK"/> kepada Google.</translation>
-<translation id="1609700857210121286">Pergi ke menu Chromium &gt; Tetapan &gt; (Lanjutan) Privasi
-          dan lumpuhkan &quot;Ramalan tindakan rangkaian&quot;.
-          Jika tindakan ini tidak menyelesaikan isu ini, kami cadangkan agar memilih pilihan ini
-          sekali lagi untuk prestasi yang dipertingkatkan.</translation>
 <translation id="734373864078049451">Web, penanda halaman dan barangan Chromium anda yang lain tinggal di sini.</translation>
 <translation id="3197823471738295152">Peranti anda telah dikemas kini.</translation>
 <translation id="3065280201209294872">Tapak ini menggunakan tetapan keselamatan yang sudah lapuk yang mungkin menghalang versi Chromium kelak daripada mengaksesnya dengan selamat.</translation>
@@ -94,6 +85,7 @@
 <translation id="7473891865547856676">Tidak, Terima Kasih</translation>
 <translation id="9191268552238695869">Pentadbir telah memasang Chromium pada sistem ini dan tersedia untuk semua pengguna. Chromium tahap sistem kini akan menggantikan pemasangan tahap pengguna anda.</translation>
 <translation id="3509308970982693815">Sila tutup semua tetingkap Chromium dan cuba lagi.</translation>
+<translation id="8851136666856101339">utama</translation>
 <translation id="4077262827416206768">Sila tutup semua tetingkap Chromium dan lancarkan semula Chromium agar perubahan ini boleh dilaksanakan.</translation>
 <translation id="6475912303565314141">Sambungan turut mengawal halaman yang ditunjukkan apabila anda memulakan Chromium.</translation>
 <translation id="1725059042853530269"><ph name="FILE_NAME"/> boleh membahayakan pelayaran anda, jadi Kromium telah menyekatnya.</translation>
@@ -111,7 +103,6 @@
 <translation id="6055895534982063517">Terdapat versi baharu Chromium yang lebih pantas daripada biasa tersedia.</translation>
 <translation id="8821041990367117597">Chromium tidak dapat menyegerakkan data anda kerana butiran log masuk akaun anda sudah lapuk.</translation>
 <translation id="4677944499843243528">Nampaknya profil digunakan oleh proses Chromium lain (<ph name="PROCESS_ID"/>) pada komputer lain (<ph name="HOST_NAME"/>). Chromium telah mengunci profil supaya profil tidak rosak. Jika anda pasti tiada proses lain yang menggunakan profil ini, anda boleh membuka profil dan melancarkan semula Chromium.</translation>
-<translation id="5405650547142096840">Alih keluar daripada Chromium</translation>
 <translation id="4994636714258228724">Tambahkan diri anda kepada Chromium</translation>
 <translation id="7066436765290594559">OS Chromium tidak dapat menyegerakkan data anda. Sila kemas kini frasa laluan Segerak anda.</translation>
 <translation id="7747138024166251722">Pemasang tidak dapat mencipta direktori sementara. Sila semak ruang cakera kosong dan kebenaran untuk memasang perisian.</translation>
@@ -156,6 +147,7 @@
 <translation id="275588974610408078">Laporan keranapan tidak tersedia dalam Chromium.</translation>
 <translation id="5909170354645388250">Tidak digunakan dalam Chromium. Placeholder untuk mengekalkan penyegerakan peta sumber. Satu hujah dijangkakan: $1.</translation>
 <translation id="1144202035120576837"><ph name="SITE"/> biasanya menggunakan penyulitan untuk melindungi maklumat anda. Apabila Chromium cuba menyambung ke <ph name="SITE"/> kali ini, tapak web menghantar balik bukti kelayakan yang luar biasa dan tidak betul. Sama ada penyerang cuba menyamar menjadi <ph name="SITE"/>, atau skrin log masuk Wi-Fi telah mengganggu sambungan. Maklumat anda masih selamat kerana Chromium menghentikan sambungan sebelum apa-apa data diubah.</translation>
+<translation id="2316129865977710310">Tidak, terima kasih</translation>
 <translation id="7937630085815544518">Anda telah log masuk ke Chromium sebagai <ph name="USER_EMAIL_ADDRESS"/>. Sila gunakan akaun yang sama untuk log masuk lagi.</translation>
 <translation id="2685838254101182273">Chromium telah berhenti mengemas kini dan tidak lagi menyokong versi sistem pengendalian anda ini.</translation>
 <translation id="8684913864886094367">Chromium tidak ditutup dengan betul.</translation>
@@ -186,6 +178,10 @@
 
 Beberapa ciri mungkin tidak tersedia. Sila nyatakan direktori profil yang berbeza atau gunakan versi Chromium yang lebih baharu.</translation>
 <translation id="8907580949721785412">Chromium cuba menunjukkan kata laluan. Taip kata laluan Windows anda untuk membenarkannya.</translation>
+<translation id="4404275227760602850">Pergi ke menu Chromium &gt; Tetapan &gt; (Lanjutan) Privasi
+          dan lumpuhkan &quot;Praambil sumber halaman.&quot;
+          Jika tindakan ini tidak menyelesaikan isu ini, kami cadangkan agar mendayakan semula pilihan ini
+          sekali lagi untuk prestasi yang lebih baik.</translation>
 <translation id="1174473354587728743">Berkongsi komputer? Sekarang anda boleh menyediakan Chromium menurut cara yang anda suka.</translation>
 <translation id="9013087743919948559">Tambah ke Chromium</translation>
 <translation id="2525993619214772747">Chromium Berkelakuan Aneh?</translation>
@@ -208,6 +204,7 @@ Beberapa ciri mungkin tidak tersedia. Sila nyatakan direktori profil yang berbez
 <translation id="2966088006374919794">Chromium perlu melancarkan aplikasi luaran untuk mengendalikan pautan <ph name="SCHEME"/>. Pautan yang diminta adalah <ph name="PROTOLINK"/>.</translation>
 <translation id="2558235863893655150">Adakah anda mahu Chromium menyimpan kata laluan anda?</translation>
 <translation id="6485906693002546646">Anda menggunakan <ph name="PROFILE_EMAIL"/> untuk menyegerakkan bahan digital chromium anda. Untuk mengemas kini pilihan penyegerakan anda atau menggunakan Chromium tanpa akaun Google, lawati <ph name="SETTINGS_LINK"/>.</translation>
+<translation id="705851970750939768">Kemas kini Chromium</translation>
 <translation id="5772805321386874569">(memerlukan Chromium <ph name="BEGIN_BUTTON"/>dimulakan semula<ph name="END_BUTTON"/>)</translation>
 <translation id="1688750314291223739">Sediakan Penyegerakan untuk menyimpan ciri penyemak imbas yang diperibadikan di web dan aksesnya dari Chromium pada mana-mana komputer.</translation>
 <translation id="8610831143142469229">Benarkan Chromium mengakses rangkaian dalam tetapan firewall atau antivirus
@@ -249,7 +246,6 @@ Meneruskan juga log masuk akan menggabungkan maklumat Chromium seperti penanda h
 <translation id="8704119203788522458">Ini Chromium anda</translation>
 <translation id="8269379391216269538">Bantu menjadikan Chromium lebih baik</translation>
 <translation id="4224199872375172890">Chromium telah dikemas kini</translation>
-<translation id="374481098568514319">Komputer ini sudah mempunyai versi komponen Chromium yang lebih baharu. Sila gunakan pemasang yang lebih baharu.</translation>
 <translation id="5862307444128926510">Selamat datang ke Chromium</translation>
 <translation id="7318036098707714271">Fail pilihan anda rosak atau tidak sah.
 
